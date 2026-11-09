@@ -1,0 +1,137 @@
+I’ll identify the applications first, then evaluate all 84 criteria using repository evidence and bounded checks. I won’t modify source or configuration files.
+
+Primary language: C, with Tcl tests and Python, Ruby, and shell tooling.
+
+APPLICATIONS_IDENTIFIED: 1
+
+Applications:
+1. `.` - Redis database server and bundled CLI, Sentinel, and benchmarking tools.
+
+The modules extend Redis rather than run as independent applications. I’ll use one application for all application-scope criteria.
+
+Redis has extensive tests, CodeQL and Coverity scans, and coverage reporting. I found no `AGENTS.md`, skills, devcontainer, or enforced coverage threshold. GitHub CLI is not installed, so checks that require authenticated access will be skipped.
+
+Next I’ll attempt one selected test and check the documented local run path.
+
+The selected test failed with a timeout, and the server launch failed because `src/redis-server` has not been built. Neither runnable criterion will receive a pass. The working tree remains clean.
+
+I’m validating all 84 scores and skip rules before saving the report.
+
+# Level
+**Level 3, 50% readiness.**
+
+32 passed, 32 failed, 20 skipped across all 84 criteria. Report saved successfully.
+
+Audited `unstable` at `8e2ba8c`. History is shallow. Source and configuration files were unchanged.
+
+# Applications
+1. `.` - Redis database server with bundled CLI, Sentinel, benchmarking tools, and extension modules.
+
+# Criteria
+Scores are numerator/denominator. `null/1` means skipped and excluded from scoring.
+
+**Style & Validation**
+- Linter: 1/1 - CodeQL, Coverity, and compiler checks configured.
+- Type checking: 1/1 - C compiler checks run in CI.
+- Formatter: 0/1 - No application-wide formatter configured.
+- Pre-commit hooks: 0/1 - No quality-check hooks found.
+- Strict typing: null/1 - No separate strict typing mode applicable.
+- Naming consistency: 0/1 - No enforced naming rules found.
+- Cyclomatic complexity: 0/1 - No complexity monitoring found.
+- Large-file detection: 1/1 - Release tarballs exceeding 8000 MB trigger warnings; source files have no equivalent guard.
+- Dead-code detection: 1/1 - Compiler warnings detect unused functions and variables.
+- Duplicate-code detection: 0/1 - No detector configured.
+- Code modularization: 0/1 - No internal boundary enforcement found.
+- Technical-debt tracking: 0/1 - No debt scanner or documented tracking system.
+- N+1 detection: null/1 - Database engine, not an ORM-backed application.
+- Unused-dependency detection: 0/1 - No automated dependency-use checks.
+
+**Build System**
+- Build command documented: 1/1 - README documents prerequisites and `make`.
+- Dependencies pinned: 1/1 - Vendored dependencies, module tags, and exact Python pins.
+- VCS CLI tools: 0/1 - Neither `gh` nor `glab` installed.
+- Automated PR review: null/1 - Requires authenticated repository access.
+- Agentic development: 0/1 - No strong evidence in configuration or available history.
+- Fast CI feedback: null/1 - Check durations unavailable.
+- Build-performance tracking: null/1 - No timing evidence or authenticated CLI.
+- Deployment frequency: null/1 - Release and deployment activity unavailable.
+- Single-command setup: 1/1 - Short core-only build and launch path documented.
+- Feature flags: 0/1 - No explicit rollout-flag system found.
+- Release-note automation: 1/1 - Changelog-generation script exists.
+- Progressive rollout: null/1 - Not a deployment-infrastructure repository.
+- Rollback automation: null/1 - Production deployments are outside repository scope.
+- Monorepo tooling: null/1 - One application identified.
+- Heavy-dependency detection: null/1 - Native server, not a frontend bundle.
+- Version-drift detection: 0/1 - No cross-package consistency checks.
+- Release automation: 1/1 - Workflow builds and uploads release assets.
+- Dead-feature-flag detection: null/1 - Feature-flag prerequisite not satisfied.
+
+**Testing**
+- Unit tests: 1/1 - Tcl and C component tests exist.
+- Integration tests: 1/1 - Replication, persistence, and multi-instance tests exist.
+- Unit tests runnable: 0/1 - Selected SET/GET test timed out, exit 1; server binary absent.
+- Test-performance tracking: 1/1 - Harness reports durations in CI logs.
+- Flaky-test handling: 1/1 - Bounded assertion retries implemented and used.
+- Coverage thresholds: 0/1 - Codecov checks are informational, not enforced.
+- Test naming: 1/1 - Harness explicitly discovers configured `*.tcl` units.
+- Test isolation: 1/1 - Separate processes, ports, and temporary configurations.
+- Interactive QA documented: 1/1 - Build, launch, PING, and SET/GET documented.
+- Interactive QA runnable: 0/1 - Launch failed because `src/redis-server` was not built. No full build performed.
+
+**Documentation**
+- AGENTS.md: 0/1 - Root file absent.
+- README: 1/1 - Setup and usage instructions present.
+- Automated documentation: 1/1 - Module API Markdown generator exists.
+- Skills: 0/1 - No repository-local skills found.
+- Documentation freshness: 1/1 - Available shallow history reports updates within 180 days.
+- API schema documentation: null/1 - RESP service, not HTTP/GraphQL; native command schemas exist.
+- Service architecture: 1/1 - TLS documentation explains client and peer communication.
+- AGENTS.md validation: 0/1 - Required file absent.
+- Runbooks: 0/1 - No specific operational runbook pointers found.
+- Issue templates: 1/1 - Structured bug, crash, and feature templates.
+- Issue labeling: 0/1 - No verified priority/type/area taxonomy.
+- Backlog health: null/1 - Issue activity unavailable without authenticated access.
+- PR templates: 0/1 - No qualifying template found.
+
+**Dev Environment**
+- Devcontainer: 0/1 - No devcontainer configuration.
+- Environment template: 1/1 - README documents environment options; defaults need no environment file.
+- Local services: null/1 - Standalone Redis needs no external service.
+- Database schema: null/1 - Schemaless engine without an application ORM schema.
+- Devcontainer runnable: null/1 - Devcontainer CLI unavailable.
+- Comprehensive gitignore: 0/1 - Missing `.env` and `.DS_Store` exclusions.
+
+**Debugging & Observability**
+- Structured logging: 0/1 - Embedded logger, but no qualifying library or dedicated module.
+- Distributed tracing: 0/1 - No propagated trace/request identifiers found.
+- Metrics collection: 1/1 - INFO and LATENCY expose operational metrics.
+- Code-quality metrics: 1/1 - Codecov coverage and Coverity analysis configured.
+- Contextual error tracking: 0/1 - No qualifying integration found.
+- Alerting: 0/1 - Notification hooks exist, but no enabled destination found.
+- Deployment observability: 0/1 - No active notifications or impact-dashboard references.
+- Health checks: 1/1 - Native PING/PONG liveness mechanism.
+- Circuit breakers: null/1 - Standalone target requires no external service.
+- Profiling instrumentation: 1/1 - SLOWLOG, LATENCY, and watchdog stack capture.
+- Product analytics: 0/1 - No product-analytics integration.
+- Error-to-insight pipeline: 0/1 - No production-error-to-issue automation.
+
+**Security**
+- Branch protection: null/1 - Authenticated administrator access unavailable.
+- Secret scanning: null/1 - No local scanner evidence; native settings unverified.
+- CODEOWNERS: 0/1 - File absent.
+- Automated security review: 1/1 - CodeQL and Coverity generate findings.
+- Dependency updates: 1/1 - Weekly Dependabot configuration; live activity unverified.
+- Privacy infrastructure: 1/1 - PII-aware diagnostic suppression and redaction exist.
+- Secrets management: 1/1 - Workflows use GitHub secrets references.
+- Minimum release age: 0/1 - No explicit dependency waiting period.
+- DAST: null/1 - Not a deployed HTTP/web application.
+- PII handling: 1/1 - Documented user-data hiding mechanism.
+- Log scrubbing: 1/1 - Sensitive command arguments and diagnostics are redacted.
+
+# Action Items
+- Add `AGENTS.md` and a repository skill covering setup, focused tests, QA, and conventions; validate their commands in CI.
+- Configure formatting, naming checks, and pre-commit hooks. Add missing secret-file and OS-file exclusions.
+- Build the core before focused test and QA checks, then enforce a minimum Codecov coverage threshold.
+
+---
+View the full report: https://app.factory.ai/analytics/readiness/https%3A%2F%2Fgithub.com%2Fredis%2Fredis

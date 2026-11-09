@@ -1,0 +1,425 @@
+{
+  "basis": "Native categories and labels from the unmodified Day.js Factory Markdown export. assignment_pillar is an explicit analyst crosswalk, not a Factory-provided eight-pillar score. Code Quality contains eight criteria moved from Style & Validation and Debugging & Observability; Task Discovery merges into Security & Governance; Product & Experimentation merges into Observability. Every criterion occurs once.",
+  "criteria": {
+    "type_check": {
+      "label": "Type Checker",
+      "factory_category": "Style & Validation",
+      "assignment_pillar": "Style & Validation"
+    },
+    "strict_typing": {
+      "label": "Strict Typing",
+      "factory_category": "Style & Validation",
+      "assignment_pillar": "Style & Validation"
+    },
+    "cyclomatic_complexity": {
+      "label": "Cyclomatic Complexity",
+      "factory_category": "Style & Validation",
+      "assignment_pillar": "Code Quality"
+    },
+    "large_file_detection": {
+      "label": "Large File Detection",
+      "factory_category": "Style & Validation",
+      "assignment_pillar": "Code Quality"
+    },
+    "duplicate_code_detection": {
+      "label": "Duplicate Code Detection",
+      "factory_category": "Style & Validation",
+      "assignment_pillar": "Code Quality"
+    },
+    "code_modularization": {
+      "label": "Code Modularization Enforcement",
+      "factory_category": "Style & Validation",
+      "assignment_pillar": "Code Quality"
+    },
+    "tech_debt_tracking": {
+      "label": "Technical Debt Tracking",
+      "factory_category": "Style & Validation",
+      "assignment_pillar": "Code Quality"
+    },
+    "lint_config": {
+      "label": "Linter Configuration",
+      "factory_category": "Style & Validation",
+      "assignment_pillar": "Style & Validation"
+    },
+    "formatter": {
+      "label": "Code Formatter",
+      "factory_category": "Style & Validation",
+      "assignment_pillar": "Style & Validation"
+    },
+    "pre_commit_hooks": {
+      "label": "Pre-commit Hooks",
+      "factory_category": "Style & Validation",
+      "assignment_pillar": "Style & Validation"
+    },
+    "naming_consistency": {
+      "label": "Naming Consistency",
+      "factory_category": "Style & Validation",
+      "assignment_pillar": "Style & Validation"
+    },
+    "dead_code_detection": {
+      "label": "Dead Code Detection",
+      "factory_category": "Style & Validation",
+      "assignment_pillar": "Code Quality"
+    },
+    "n_plus_one_detection": {
+      "label": "N+1 Query Detection",
+      "factory_category": "Style & Validation",
+      "assignment_pillar": "Code Quality"
+    },
+    "build_cmd_doc": {
+      "label": "Build Command Documentation",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "vcs_cli_tools": {
+      "label": "VCS CLI Tools",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "agentic_development": {
+      "label": "Agentic Development",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "single_command_setup": {
+      "label": "Single Command Setup",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "feature_flag_infrastructure": {
+      "label": "Feature Flag Infrastructure",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "unused_dependencies_detection": {
+      "label": "Unused Dependencies Detection",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "deps_pinned": {
+      "label": "Dependencies Pinned",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "release_notes_automation": {
+      "label": "Release Notes Automation",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "heavy_dependency_detection": {
+      "label": "Heavy Dependency Detection",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "release_automation": {
+      "label": "Release Automation",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "automated_pr_review": {
+      "label": "Automated PR Review Generation",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "fast_ci_feedback": {
+      "label": "Fast CI Feedback",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "build_performance_tracking": {
+      "label": "Build Performance Tracking",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "deployment_frequency": {
+      "label": "Deployment Frequency",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "progressive_rollout": {
+      "label": "Progressive Rollout",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "rollback_automation": {
+      "label": "Rollback Automation",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "monorepo_tooling": {
+      "label": "Monorepo Tooling",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "version_drift_detection": {
+      "label": "Version Drift Detection",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "dead_feature_flag_detection": {
+      "label": "Dead Feature Flag Detection",
+      "factory_category": "Build System",
+      "assignment_pillar": "Build System"
+    },
+    "test_performance_tracking": {
+      "label": "Test Performance Tracking",
+      "factory_category": "Testing",
+      "assignment_pillar": "Testing"
+    },
+    "interactive_qa_exists": {
+      "label": "Interactive QA Exists",
+      "factory_category": "Testing",
+      "assignment_pillar": "Testing"
+    },
+    "interactive_qa_runnable": {
+      "label": "Interactive QA Runnable",
+      "factory_category": "Testing",
+      "assignment_pillar": "Testing"
+    },
+    "unit_tests_exist": {
+      "label": "Unit Tests Exist",
+      "factory_category": "Testing",
+      "assignment_pillar": "Testing"
+    },
+    "integration_tests_exist": {
+      "label": "Integration Tests Exist",
+      "factory_category": "Testing",
+      "assignment_pillar": "Testing"
+    },
+    "test_coverage_thresholds": {
+      "label": "Test Coverage Thresholds",
+      "factory_category": "Testing",
+      "assignment_pillar": "Testing"
+    },
+    "test_naming_conventions": {
+      "label": "Test File Naming Conventions",
+      "factory_category": "Testing",
+      "assignment_pillar": "Testing"
+    },
+    "test_isolation": {
+      "label": "Test Isolation",
+      "factory_category": "Testing",
+      "assignment_pillar": "Testing"
+    },
+    "unit_tests_runnable": {
+      "label": "Unit Tests Runnable",
+      "factory_category": "Testing",
+      "assignment_pillar": "Testing"
+    },
+    "flaky_test_detection": {
+      "label": "Flaky Test Detection",
+      "factory_category": "Testing",
+      "assignment_pillar": "Testing"
+    },
+    "agents_md": {
+      "label": "AGENTS.md File",
+      "factory_category": "Documentation",
+      "assignment_pillar": "Documentation"
+    },
+    "skills": {
+      "label": "Skills Configuration",
+      "factory_category": "Documentation",
+      "assignment_pillar": "Documentation"
+    },
+    "service_flow_documented": {
+      "label": "Service Architecture Documented",
+      "factory_category": "Documentation",
+      "assignment_pillar": "Documentation"
+    },
+    "agents_md_validation": {
+      "label": "AGENTS.md Freshness Validation",
+      "factory_category": "Documentation",
+      "assignment_pillar": "Documentation"
+    },
+    "readme": {
+      "label": "README File",
+      "factory_category": "Documentation",
+      "assignment_pillar": "Documentation"
+    },
+    "automated_doc_generation": {
+      "label": "Automated Documentation Generation",
+      "factory_category": "Documentation",
+      "assignment_pillar": "Documentation"
+    },
+    "documentation_freshness": {
+      "label": "Documentation Freshness",
+      "factory_category": "Documentation",
+      "assignment_pillar": "Documentation"
+    },
+    "api_schema_docs": {
+      "label": "API Schema Docs",
+      "factory_category": "Documentation",
+      "assignment_pillar": "Documentation"
+    },
+    "devcontainer": {
+      "label": "Dev Container",
+      "factory_category": "Development Environment",
+      "assignment_pillar": "Dev Environment"
+    },
+    "env_template": {
+      "label": "Environment Template",
+      "factory_category": "Development Environment",
+      "assignment_pillar": "Dev Environment"
+    },
+    "local_services_setup": {
+      "label": "Local Services Setup",
+      "factory_category": "Development Environment",
+      "assignment_pillar": "Dev Environment"
+    },
+    "database_schema": {
+      "label": "Database Schema",
+      "factory_category": "Development Environment",
+      "assignment_pillar": "Dev Environment"
+    },
+    "devcontainer_runnable": {
+      "label": "Devcontainer Runnable",
+      "factory_category": "Development Environment",
+      "assignment_pillar": "Dev Environment"
+    },
+    "structured_logging": {
+      "label": "Structured Logging",
+      "factory_category": "Debugging & Observability",
+      "assignment_pillar": "Observability"
+    },
+    "distributed_tracing": {
+      "label": "Distributed Tracing",
+      "factory_category": "Debugging & Observability",
+      "assignment_pillar": "Observability"
+    },
+    "metrics_collection": {
+      "label": "Metrics Collection",
+      "factory_category": "Debugging & Observability",
+      "assignment_pillar": "Observability"
+    },
+    "error_tracking_contextualized": {
+      "label": "Error Tracking Contextualized",
+      "factory_category": "Debugging & Observability",
+      "assignment_pillar": "Observability"
+    },
+    "alerting_configured": {
+      "label": "Alerting Configured",
+      "factory_category": "Debugging & Observability",
+      "assignment_pillar": "Observability"
+    },
+    "runbooks_documented": {
+      "label": "Runbooks Documented",
+      "factory_category": "Debugging & Observability",
+      "assignment_pillar": "Observability"
+    },
+    "deployment_observability": {
+      "label": "Deployment Observability",
+      "factory_category": "Debugging & Observability",
+      "assignment_pillar": "Observability"
+    },
+    "profiling_instrumentation": {
+      "label": "Profiling Instrumentation",
+      "factory_category": "Debugging & Observability",
+      "assignment_pillar": "Observability"
+    },
+    "code_quality_metrics": {
+      "label": "Code Quality Metrics Dashboard",
+      "factory_category": "Debugging & Observability",
+      "assignment_pillar": "Code Quality"
+    },
+    "health_checks": {
+      "label": "Health Checks",
+      "factory_category": "Debugging & Observability",
+      "assignment_pillar": "Observability"
+    },
+    "circuit_breakers": {
+      "label": "Circuit Breakers",
+      "factory_category": "Debugging & Observability",
+      "assignment_pillar": "Observability"
+    },
+    "codeowners": {
+      "label": "CODEOWNERS File",
+      "factory_category": "Security",
+      "assignment_pillar": "Security & Governance"
+    },
+    "dependency_update_automation": {
+      "label": "Dependency Update Automation",
+      "factory_category": "Security",
+      "assignment_pillar": "Security & Governance"
+    },
+    "gitignore_comprehensive": {
+      "label": "Gitignore Comprehensive",
+      "factory_category": "Security",
+      "assignment_pillar": "Security & Governance"
+    },
+    "log_scrubbing": {
+      "label": "Sensitive Data Log Scrubbing",
+      "factory_category": "Security",
+      "assignment_pillar": "Security & Governance"
+    },
+    "min_release_age": {
+      "label": "Minimum Dependency Release Age",
+      "factory_category": "Security",
+      "assignment_pillar": "Security & Governance"
+    },
+    "secrets_management": {
+      "label": "Secrets Management",
+      "factory_category": "Security",
+      "assignment_pillar": "Security & Governance"
+    },
+    "branch_protection": {
+      "label": "Branch Protection",
+      "factory_category": "Security",
+      "assignment_pillar": "Security & Governance"
+    },
+    "secret_scanning": {
+      "label": "Secret Scanning",
+      "factory_category": "Security",
+      "assignment_pillar": "Security & Governance"
+    },
+    "automated_security_review": {
+      "label": "Automated Security Review Generation",
+      "factory_category": "Security",
+      "assignment_pillar": "Security & Governance"
+    },
+    "dast_scanning": {
+      "label": "DAST Scanning",
+      "factory_category": "Security",
+      "assignment_pillar": "Security & Governance"
+    },
+    "pii_handling": {
+      "label": "PII Handling",
+      "factory_category": "Security",
+      "assignment_pillar": "Security & Governance"
+    },
+    "privacy_compliance": {
+      "label": "Privacy Compliance",
+      "factory_category": "Security",
+      "assignment_pillar": "Security & Governance"
+    },
+    "issue_labeling_system": {
+      "label": "Issue Labeling System",
+      "factory_category": "Task Discovery",
+      "assignment_pillar": "Security & Governance"
+    },
+    "pr_templates": {
+      "label": "PR Templates",
+      "factory_category": "Task Discovery",
+      "assignment_pillar": "Security & Governance"
+    },
+    "issue_templates": {
+      "label": "Issue Templates",
+      "factory_category": "Task Discovery",
+      "assignment_pillar": "Security & Governance"
+    },
+    "backlog_health": {
+      "label": "Backlog Health",
+      "factory_category": "Task Discovery",
+      "assignment_pillar": "Security & Governance"
+    },
+    "product_analytics_instrumentation": {
+      "label": "Product Analytics Instrumentation",
+      "factory_category": "Product & Experimentation",
+      "assignment_pillar": "Observability"
+    },
+    "error_to_insight_pipeline": {
+      "label": "Error to Insight Pipeline",
+      "factory_category": "Product & Experimentation",
+      "assignment_pillar": "Observability"
+    }
+  }
+}

@@ -1,0 +1,193 @@
+I’ll inspect the repository, identify its applications, then evaluate all 84 criteria without changing source or configuration. I’ll use only bounded checks and won’t run the test suite.
+
+
+Primary language: JavaScript, with TypeScript declaration files.
+
+APPLICATIONS_IDENTIFIED: 1
+
+Applications:
+1. . - Day.js date/time library, published as one npm package. Plugins, locales, and the demo share its build and release lifecycle.
+
+
+The repository has lint hooks, a lockfile, a coverage gate, bundle-size checks, and automated releases. It lacks a documented checkout-to-QA workflow and agent guidance.
+
+Node/npm, GitHub/GitLab CLI, and the devcontainer CLI are not installed. I’ll skip checks whose rules allow that, and assess interactive QA using the documented-path fallback.
+
+
+# Level
+Level 2
+
+**33.9% pass rate:** 20 of 59 evaluated criteria passed; 25 skipped. Report stored successfully. Source and configuration were unchanged.
+
+# Applications
+1. **.** - Day.js date/time library, published as one npm package.
+
+# Criteria
+`null/1` means skipped and excluded from scoring.
+
+**Style & Validation**
+- Linter: 1/1 - ESLint configuration runs locally and in CI.
+- Type checking: 0/1 - Declarations exist, but no configured compiler check.
+- Formatter: 1/1 - Prettier configuration and script exist.
+- Pre-commit hooks: 1/1 - Commits trigger linting.
+- Strict typing: 0/1 - No strict type-checking configuration.
+- Naming consistency: 1/1 - Airbnb ESLint preset enforces naming rules.
+- Cyclomatic complexity: 0/1 - No complexity thresholds.
+- Large-file detection: 0/1 - No file-size or line-count enforcement.
+- Dead-code detection: 1/1 - ESLint detects unused variables.
+- Duplicate-code detection: 0/1 - No duplication scanner.
+- Code modularization: 0/1 - No enforced core/plugin boundaries.
+- Technical-debt tracking: 0/1 - TODO comments lack tracking enforcement.
+
+**Build System**
+- Build command documentation: 0/1 - Build commands appear in scripts/CI, not contributor documentation.
+- Dependency pinning: 1/1 - Committed npm lockfile.
+- VCS CLI tools: 0/1 - Neither GitHub nor GitLab CLI is installed.
+- Automated PR review: null/1 - Cannot verify remote review activity.
+- Agentic development: 0/1 - No agent workflow or co-authorship evidence.
+- Fast CI feedback: null/1 - Remote check timings unavailable.
+- Build-performance tracking: null/1 - No tracking evidence; remote timings unavailable.
+- Deployment frequency: null/1 - Remote release history unavailable.
+- Single-command setup: 0/1 - No documented fresh-checkout setup sequence.
+- Feature flags: 0/1 - No rollout-toggle infrastructure.
+- Release-notes automation: 1/1 - semantic-release generates the changelog.
+- Progressive rollout: null/1 - Not an infrastructure deployment repository.
+- Rollback automation: null/1 - Not an infrastructure deployment repository.
+- Monorepo tooling: null/1 - Single-package repository.
+- Heavy-dependency detection: 1/1 - Build enforces a 2.99 KB bundle limit.
+- Unused-dependency detection: 0/1 - No dependency-usage scanner.
+- Version-drift detection: null/1 - One build package.
+- Release automation: 1/1 - Release workflow builds and invokes semantic-release.
+- Dead-feature-flag detection: null/1 - No feature-flag infrastructure.
+
+**Testing**
+- Unit tests exist: 1/1 - Extensive core, locale, and plugin tests.
+- Integration tests exist: 1/1 - Browser-bundle and plugin-interaction tests.
+- Unit tests runnable: null/1 - Node/npm unavailable; no tests executed.
+- Test-performance tracking: 0/1 - No retained timing reports or analytics.
+- Flaky-test detection: null/1 - No local tooling; remote history unavailable.
+- Coverage thresholds: 1/1 - CI enforces 100% global line coverage.
+- Test naming: 1/1 - Explicit Jest matching pattern and contributor guidance.
+- Test isolation: 1/1 - Default Jest worker isolation remains enabled.
+- Interactive QA documented: 0/1 - No complete checkout-to-interaction procedure.
+- Interactive QA runnable: 0/1 - Runtime unavailable; documentation fallback is incomplete.
+- N+1 detection: null/1 - No database or ORM.
+
+**Documentation**
+- AGENTS.md: 0/1 - Missing.
+- README: 1/1 - Installation and library usage documented.
+- Automated documentation: 1/1 - Changelog generation configured.
+- Repository skills: 0/1 - No valid repository-local skills.
+- Documentation freshness: 1/1 - Key documents changed September 15, 2026.
+- API schemas: null/1 - No HTTP or GraphQL service.
+- Architecture documentation: 0/1 - No architecture diagrams or dependency-flow documentation.
+- AGENTS.md validation: 0/1 - File and validation automation absent.
+- Runbooks: 0/1 - No operational procedures or links.
+- Issue templates: 1/1 - Structured bug-report template.
+- Issue labeling: 0/1 - No evidenced priority/type/area taxonomy.
+- Backlog health: null/1 - Remote issue data unavailable.
+- PR templates: 0/1 - Missing.
+
+**Dev Environment**
+- Devcontainer: 0/1 - No configuration.
+- Environment template: 0/1 - No template or explicit environment requirements.
+- Local-service setup: null/1 - No external runtime services.
+- Database schema: null/1 - No database.
+- Devcontainer runnable: null/1 - Devcontainer CLI unavailable.
+
+**Debugging & Observability**
+- Structured logging: 0/1 - No logging library or structured logger.
+- Distributed tracing: 0/1 - No instrumentation.
+- Metrics collection: 0/1 - No runtime metrics.
+- Code-quality metrics: 1/1 - Coverage collected and conditionally uploaded to Codecov.
+- Contextualized error tracking: 0/1 - No configured integration.
+- Alerting: 0/1 - No operational alert configuration.
+- Deployment observability: 0/1 - No deployment-impact dashboards or notifications.
+- Health checks: null/1 - Library, not a running service.
+- Circuit breakers: null/1 - No external runtime calls.
+- Profiling: 0/1 - No runtime-performance profiling setup.
+- Log scrubbing: 0/1 - No redaction or sanitization mechanism.
+- Product analytics: 0/1 - No instrumentation.
+- Error-to-insight pipeline: 0/1 - No error-to-issue automation.
+
+**Security**
+- Branch protection: null/1 - Remote permissions and rules unverifiable.
+- Secret scanning: null/1 - No local scanner; native configuration unverifiable.
+- CODEOWNERS: 0/1 - Missing.
+- Automated security review: null/1 - No local reporting configuration; remote scanning unverifiable.
+- Dependency updates: 0/1 - No Dependabot/Renovate configuration.
+- Comprehensive gitignore: 0/1 - Does not exclude `.env` secrets.
+- DAST: null/1 - Not a deployed web service.
+- PII handling: null/1 - No personal-data collection workflows.
+- Privacy compliance: null/1 - Library does not collect user data.
+- Secrets management: 1/1 - CI uses GitHub Actions secrets.
+- Minimum release age: 0/1 - No dependency-update waiting period.
+
+# Action Items
+- Add root `AGENTS.md` with a supported Node version, checkout setup, build/test commands, environment requirements, and an executable library smoke check.
+- Configure strict declaration/type checking in CI.
+- Add Renovate with a minimum release age, and update `.gitignore` to exclude `.env` secrets while retaining templates.
+
+---
+View the full report: https://app.factory.ai/analytics/readiness/https%3A%2F%2Fgithub.com%2Fiamkun%2Fdayjs
+
+I’ll use the original results without rescanning or changing files. I’ll also distinguish the scoring rule actually used from CLI-version behavior that wasn’t recorded.
+
+
+## 1. Exact totals from the original report
+
+| Reported group | Pass | Evaluated | Skipped |
+|---|---:|---:|---:|
+| Style & Validation | 5 | 12 | 0 |
+| Build System | 4 | 10 | 9 |
+| Testing | 5 | 8 | 3 |
+| Documentation | 4 | 11 | 2 |
+| Dev Environment | 0 | 2 | 3 |
+| Debugging & Observability | 1 | 11 | 2 |
+| Security | 1 | 5 | 6 |
+| **Total** | **20** | **59** | **25** |
+
+“Evaluated” includes passes and failures. Thus, **39 criteria failed**, and all **84 criteria** are accounted for.
+
+## 2. Exact scoring rule actually used
+
+The preserved evaluation used:
+
+`score = mean(numerator / denominator)` across non-skipped criteria.
+
+Every criterion had denominator 1, giving **20/59 = 33.90%, Level 2**.
+
+Its implemented boundaries were:
+
+- Level 1: ≤20%
+- Level 2: >20% through 40%
+- Level 3: >40% through 60%
+- Level 4: >60% through 80%
+- Level 5: >80%
+
+**Next level:** with the same 59 evaluated criteria, at least **24 passes**, or **40.68%**, are needed. That means **four additional passes**.
+
+**Version limitation:** the CLI version was not recorded. Therefore, I cannot certify that this is its native scoring algorithm. Current [Factory documentation](https://docs.factory.com/agent-readiness/overview.md) instead describes **80% previous-level progression gates**. That is different from the rule used in this report.
+
+## 3. Required gates versus interchangeable improvements
+
+**Under the preserved report’s scoring rule, no individual failed criterion is a mandatory level gate.** Any four failed criteria becoming passes would reach Level 3, assuming evaluated/skipped membership stays unchanged.
+
+One practical combination is:
+
+- `agents_md`
+- `build_cmd_doc`
+- `single_command_setup`
+- `env_template`
+
+A sufficiently complete root `AGENTS.md` could address all four. Strict typing, dependency-update automation, or other failed criteria are interchangeable alternatives, not additional requirements.
+
+Criterion prerequisites, such as requiring `AGENTS.md` before validating it, are **not maturity-level gates** under this calculation.
+
+## Pillar mismatch
+
+The seven headings were the **presentation categories requested by the original audit instructions**, not verified native CLI pillars. The assignment expects eight, including **Code Quality**; those checks were distributed across existing groups.
+
+Current public documentation describes **nine pillars**, further demonstrating a taxonomy mismatch. Without the assignment’s mapping and recorded CLI version, an eighth native pillar or its totals cannot be asserted.
+
+**The original report remains unchanged. No repository files were rescanned or modified.**

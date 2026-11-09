@@ -1,0 +1,137 @@
+I’ll inspect the repository, identify its applications, and evaluate all 84 criteria without changing source or configuration. I’ll use bounded checks for test collection and CLI usage, then validate and save the report.
+
+
+APPLICATIONS_IDENTIFIED: 1
+
+Applications:
+1. `.` - yt-dlp command-line audio/video downloader and embeddable Python library.
+
+The repository prohibits AI-generated contributions. This audit will remain read-only and will not create issues, comments, patches, or pull requests.
+
+
+The repository has linting, formatting, pre-commit hooks, pinned dependencies, CodeQL, and automated releases. The bounded test-collection check failed because `pytest` is missing from the compatible Python environment. With no GitHub/GitLab CLI installed, checks that require authenticated remote access will be skipped.
+
+
+The CLI successfully parsed a repository-local DASH manifest and returned three media formats without network access or downloads. The worktree is unchanged. I’m now validating the 84 results and calculating the score from the report object before saving it.
+
+
+# Level
+Level 3
+
+**46.8%**, 29 passed, 33 failed, 22 skipped. All 84 criteria were validated and saved.
+
+Source and configuration were unchanged. The repository explicitly prohibits AI-generated contributions.
+
+# Applications
+1. `.` - yt-dlp command-line audio/video downloader and embeddable Python library.
+
+Primary language: Python.
+
+# Criteria
+Skipped criteria show `null/1` and do not affect the score.
+
+**Style & Validation**
+- Linter: 1/1 - Ruff configured and enforced in CI.
+- Type checker: 0/1 - No mypy, Pyright, or equivalent.
+- Formatter: 1/1 - autopep8 configured.
+- Pre-commit hooks: 1/1 - Linting and formatting hooks provided.
+- Strict typing: 0/1 - No strict type-checking configuration.
+- Naming consistency: 1/1 - Ruff naming rules enabled.
+- Cyclomatic complexity: 0/1 - No analyzer or thresholds.
+- Large-file detection: 0/1 - No size checks or LFS rules.
+- Dead-code detection: 1/1 - Ruff detects unused imports and variables.
+- Duplicate-code detection: 0/1 - No duplication detector.
+- Code modularization: 0/1 - No enforced architectural boundaries.
+- Technical-debt tracking: 0/1 - TODO formatting exists, but no debt-tracking mechanism.
+- Unused-dependency detection: 0/1 - No dependency-usage checker.
+
+**Build System**
+- Build command documentation: 1/1 - README documents compilation commands.
+- Pinned dependencies: 1/1 - Committed lockfile and hashed requirements.
+- VCS CLI tools: 0/1 - Neither `gh` nor `glab` installed.
+- Automated PR review: null/1 - Authenticated remote inspection unavailable.
+- Agentic development: 0/1 - No active agent workflow; policy prohibits AI contributions.
+- Fast CI feedback: null/1 - Remote timing evidence unavailable.
+- Build-performance tracking: null/1 - No local monitoring evidence; remote timings unavailable.
+- Deployment frequency: null/1 - Actual release frequency could not be verified.
+- Single-command setup: 1/1 - Hatch setup and execution documented.
+- Feature-flag infrastructure: 0/1 - No staged-feature rollout system.
+- Release-notes automation: 1/1 - Release workflows generate notes.
+- Progressive rollout: null/1 - Not an infrastructure repository.
+- Rollback automation: null/1 - Infrastructure rollback not applicable.
+- Monorepo tooling: null/1 - Single application.
+- Heavy-dependency detection: null/1 - CLI, not a frontend-bundled application.
+- Version-drift detection: null/1 - Single build package.
+- Release automation: 1/1 - GitHub and PyPI publishing workflows.
+- Dead-feature-flag detection: null/1 - No feature-flag infrastructure.
+- Dependency-update automation: 0/1 - No configured update-PR automation found.
+
+**Testing**
+- Unit tests present: 1/1 - Extensive `test/` suite.
+- Integration tests present: 1/1 - CLI subprocess and HTTP downloader tests.
+- Unit tests runnable: 0/1 - Single-file collection exited 1 because `pytest` is missing.
+- Test-performance tracking: 0/1 - No explicit timing reports or analytics.
+- Flaky-test detection: 1/1 - Retry and quarantine controls configured.
+- Coverage thresholds: 0/1 - Coverage explicitly unimplemented.
+- Test naming conventions: 1/1 - Documented and generated naming patterns.
+- Test isolation: 1/1 - Randomization and parallel-test tooling configured.
+- Interactive QA documented: 1/1 - Dependencies, invocation, and interactions documented.
+- Interactive QA runnable: 1/1 - Offline CLI extraction succeeded, returning three formats.
+- N+1 detection: null/1 - No application database or ORM.
+
+**Documentation**
+- AGENTS.md: 0/1 - Absent.
+- README: 1/1 - Comprehensive setup and usage instructions.
+- Automated documentation generation: 1/1 - README, manpages, site lists, and completions generated.
+- Skills: 0/1 - No repository-local skills.
+- Documentation freshness: 1/1 - Key documents changed November 4, 2026.
+- API schema documentation: null/1 - No application HTTP API.
+- Service-flow documentation: 1/1 - External API integrations documented.
+- AGENTS.md validation: 0/1 - No file or validation automation.
+- Runbooks: 0/1 - No operational runbook pointers.
+- Issue templates: 1/1 - Structured issue forms provided.
+- Issue labeling system: 0/1 - Type/area labels evidenced, but no priority taxonomy.
+- Backlog health: null/1 - Authenticated issue inspection unavailable.
+- PR templates: 0/1 - Template lacks a general testing-performed section.
+
+**Dev Environment**
+- Devcontainer: 0/1 - No development-container configuration.
+- Environment template/documentation: 1/1 - Environment variables and defaults documented.
+- Local services setup: null/1 - No managed local services required.
+- Database schema: null/1 - No application-owned database.
+- Devcontainer runnable: null/1 - Devcontainer CLI unavailable.
+
+**Debugging & Observability**
+- Structured logging: 0/1 - No dedicated logger module or declared logging dependency.
+- Distributed tracing: 0/1 - No trace/request ID propagation.
+- Metrics collection: 0/1 - No telemetry instrumentation.
+- Code-quality metrics: null/1 - No local metrics evidence; remote inspection unavailable.
+- Contextualized error tracking: 0/1 - No error-tracking integration.
+- Alerting: 0/1 - No application alerting rules.
+- Deployment observability: 0/1 - No impact dashboards or monitoring pointers.
+- Health checks: null/1 - Not a hosted service.
+- Circuit breakers/resilience: 1/1 - Bounded retries and exponential-backoff support.
+- Profiling instrumentation: 0/1 - No configured profiler.
+- Product analytics: 0/1 - No feature-usage instrumentation.
+- Error-to-insight pipeline: 0/1 - No error-to-issue automation.
+
+**Security**
+- Branch protection: null/1 - Authenticated administrative inspection unavailable.
+- Secret scanning: null/1 - No local scanner; native settings unverified.
+- CODEOWNERS: 0/1 - Absent.
+- Automated security review: 1/1 - CodeQL generates security findings.
+- Privacy compliance: null/1 - No centralized end-user data collection identified.
+- Secrets management: 1/1 - Release credentials use Actions secrets.
+- Minimum dependency release age: 1/1 - Seven-day uv policy, with explicit exceptions.
+- Comprehensive gitignore: 0/1 - `.env` files are not excluded.
+- DAST: null/1 - Not deployed as a web service.
+- PII handling: 1/1 - Credential masking and sensitive-data logging guidance.
+- Log scrubbing: 1/1 - Sensitive CLI values replaced with `PRIVATE`.
+
+# Action Items
+- Install declared test dependencies and repeat collection; add retained timing/coverage reports and coverage gates.
+- Add strict Python type checking, complexity thresholds, and architectural-boundary checks.
+- Exclude `.env` secrets, configure secret scanning, and add a testing-performed section to the PR template.
+
+---
+View the full report: https://app.factory.ai/analytics/readiness/https%3A%2F%2Fgithub.com%2Fyt-dlp%2Fyt-dlp

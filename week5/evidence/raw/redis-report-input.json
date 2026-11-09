@@ -1,0 +1,434 @@
+{
+  "repoUrl": "https://github.com/redis/redis.git",
+  "report": {
+    "large_file_detection": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": ".github/workflows/post-release-automation.yml warns when the generated source tarball exceeds 8000 MB; this is an artifact-size guard, not a source-file limit."
+    },
+    "tech_debt_tracking": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "TODO comments exist, but no debt scanner, issue-link enforcement, or documented technical-debt tracking system was found."
+    },
+    "build_cmd_doc": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "README.md documents make, make build redis, prerequisites, optional build flags, and installation."
+    },
+    "deps_pinned": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "Core dependencies are vendored; modules/modules.yaml pins bundled modules to v8.11.90; validator requirements use exact == versions."
+    },
+    "vcs_cli_tools": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "gh auth status and glab auth status both returned command not found; no authenticated VCS CLI is available."
+    },
+    "automated_pr_review": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Skipped: gh/glab are unavailable, so automated review comments on recent PRs cannot be verified."
+    },
+    "agentic_development": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No agent configurations, agent CI invocations, or AI co-authorship were found. The available git history is shallow and contains only one commit."
+    },
+    "fast_ci_feedback": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Skipped: no authenticated gh/glab access to measure primary PR check durations."
+    },
+    "build_performance_tracking": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Skipped: no authenticated VCS CLI or build-duration monitoring was found. Incremental make and documented parallel builds alone do not establish tracking."
+    },
+    "deployment_frequency": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Skipped: no authenticated VCS CLI to inspect release frequency and deployment workflow runs."
+    },
+    "single_command_setup": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "README.md documents a short core-only path: make build redis, then ./src/redis-server; dependencies are vendored and prerequisites are described."
+    },
+    "feature_flag_infrastructure": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "Runtime tuning options exist, but no explicit feature-rollout flag system or feature-flag workflow was found."
+    },
+    "release_notes_automation": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "utils/releasetools/changelog.tcl generates a versioned, dated changelog from git history."
+    },
+    "progressive_rollout": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Not applicable: this repository builds distributable Redis software, not managed deployment infrastructure."
+    },
+    "rollback_automation": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Not applicable: no production deployment infrastructure is maintained in this repository."
+    },
+    "monorepo_tooling": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Not applicable: one application was identified; bundled modules and vendored libraries are not separate applications."
+    },
+    "version_drift_detection": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "Multiple dependency/build packages exist, but no cross-package version consistency validation was found. The module pin manifest alone does not detect drift."
+    },
+    "release_automation": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "post-release-automation.yml builds source tarballs, computes checksums, and uploads GitHub release assets after a release is published."
+    },
+    "dead_feature_flag_detection": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Skipped: feature_flag_infrastructure failed; no flag lifecycle or stale-flag detector was found."
+    },
+    "agents_md": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No root AGENTS.md exists."
+    },
+    "readme": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "Root README.md provides prerequisites, build, launch, redis-cli usage, and test instructions."
+    },
+    "automated_doc_generation": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "utils/generate-module-api-doc.rb generates Markdown API reference documentation from src/module.c comments."
+    },
+    "skills": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No repository-local SKILL.md files or valid skills directories were found."
+    },
+    "documentation_freshness": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "The required git-log check reports README.md and CONTRIBUTING.md on 2026-11-03, within 180 days. History is shallow, which limits attribution."
+    },
+    "service_flow_documented": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "TLS.md documents client connections and server-to-server replication, cluster bus, MIGRATE, and Sentinel communication and trust boundaries."
+    },
+    "agents_md_validation": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "Prerequisite failed: AGENTS.md is absent. The modules build-flow workflow validates other documentation, not AGENTS.md."
+    },
+    "devcontainer": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No .devcontainer/devcontainer.json exists. docker/Dockerfile.noble is a build image, not a devcontainer configuration."
+    },
+    "env_template": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "README.md documents build environment variables including BUILD_TLS and MALLOC. The default local server needs no environment file."
+    },
+    "local_services_setup": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Not applicable: standalone Redis requires no external service; the test harness starts its own Redis instances."
+    },
+    "devcontainer_runnable": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Skipped: the devcontainer CLI is not installed."
+    },
+    "runbooks_documented": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No dedicated operational runbooks, incident playbooks, or specific external runbook pointers were found."
+    },
+    "branch_protection": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Skipped: gh/glab are unavailable; administrator access and branch protection cannot be verified."
+    },
+    "secret_scanning": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Skipped: no file-based secret scanner was found, and authenticated/admin access is unavailable for native scanning verification."
+    },
+    "codeowners": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No CODEOWNERS file exists at the root or under .github."
+    },
+    "automated_security_review": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "CodeQL analyzes C/C++ on PRs and schedules; the Coverity workflow uploads analysis for readable security findings."
+    },
+    "dependency_update_automation": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": ".github/dependabot.yml configures weekly GitHub Actions dependency updates. Live PR activity could not be checked without gh/glab."
+    },
+    "gitignore_comprehensive": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "Build artifacts and IDE files are ignored, but root .gitignore does not exclude .env files or .DS_Store."
+    },
+    "privacy_compliance": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "Privacy-by-design infrastructure exists: redis.conf documents hide-user-data-from-log, with implemented redaction and PII-safe diagnostic suppression. This is not a legal compliance certification."
+    },
+    "secrets_management": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "GitHub workflows obtain Coverity and Codecov credentials and release upload tokens through secrets references, not hardcoded values."
+    },
+    "min_release_age": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No explicit minimum dependency release age or waiting-period policy was found; a weekly Dependabot schedule is not an age gate."
+    },
+    "issue_templates": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": ".github/ISSUE_TEMPLATE contains structured bug, crash, feature, question, and other templates."
+    },
+    "issue_labeling_system": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No repository-defined priority/type/area label taxonomy was found; issue templates leave labels empty. Live labels could not be verified."
+    },
+    "backlog_health": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Skipped: gh/glab are unavailable, so issue labeling, age, and recent activity cannot be measured."
+    },
+    "pr_templates": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No pull request template with description, testing, and context sections was found."
+    },
+    "lint_config": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "CodeQL and Coverity static analysis are configured in GitHub workflows; CI also compiles with warnings treated as errors."
+    },
+    "type_check": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "src/Makefile compiles C with GCC/Clang, providing static type checks; CI builds on multiple platforms."
+    },
+    "formatter": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No Redis-wide automated formatter configuration or formatting CI check was found. Vendored projects' documentation is not root application coverage."
+    },
+    "pre_commit_hooks": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No checked-in pre-commit configuration or quality-check Git hook setup was found."
+    },
+    "strict_typing": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Not applicable: C has no separate project-wide strict typing mode comparable to TypeScript strict or mypy strict; compiler evidence is counted under type_check."
+    },
+    "naming_consistency": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No explicit enforced naming rules or naming convention instructions were found in project contribution documentation."
+    },
+    "cyclomatic_complexity": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No configured complexity analyzer, threshold, or complexity monitoring was found."
+    },
+    "dead_code_detection": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "src/Makefile enables -Wall/-W and CI adds -Werror, detecting unused static functions and variables within compiler coverage."
+    },
+    "duplicate_code_detection": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No configured copy-paste or duplicate-code detector was found."
+    },
+    "code_modularization": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "The large C application has source modules, but no architecture tests or tooling enforcing internal module boundaries was found."
+    },
+    "n_plus_one_detection": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Not applicable: Redis is the database implementation, not an ORM-backed application issuing database queries."
+    },
+    "heavy_dependency_detection": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Not applicable: Redis is a native server/CLI application, not a frontend bundle."
+    },
+    "unused_dependencies_detection": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No CI or hook checks whether vendored or declared dependencies are unused."
+    },
+    "unit_tests_exist": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "tests/unit contains Tcl unit tests, including tests/unit/type/string.tcl; C component tests also exist."
+    },
+    "integration_tests_exist": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "tests/integration includes replication, persistence, failover, and other multi-instance integration tests."
+    },
+    "unit_tests_runnable": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "Direct bounded command ./runtest --single unit/type/string --only \"SET and GET an item\" --clients 1 --timeout 10 (Execute timeout 30s) exited 1 with a harness timeout. No successful test execution; src/redis-server is absent."
+    },
+    "test_performance_tracking": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "The harness prints per-unit durations and a timing summary; CI invokes it with --verbose, retaining timing in workflow logs."
+    },
+    "flaky_test_detection": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "tests/support/test.tcl provides bounded assert_with_retry, used with three attempts in hash-field-expire tests."
+    },
+    "test_coverage_thresholds": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "Coverage is uploaded, but codecov.yml marks both patch and project status informational. No minimum coverage gate was found."
+    },
+    "test_naming_conventions": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "tests/test_helper.tcl explicitly discovers *.tcl test units under configured unit and integration directories."
+    },
+    "test_isolation": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "The Tcl harness uses parallel clients, separate Redis subprocesses, allocated port ranges, and per-server temporary configurations."
+    },
+    "interactive_qa_exists": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "README.md covers toolchain prerequisites, the core-only build and server launch, then redis-cli PING/PONG and SET/GET. The default local flow has no login gate."
+    },
+    "interactive_qa_runnable": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "Attempted ./src/redis-server with loopback binding, port 0, and persistence disabled; it exited 127 because the binary is absent. No live interaction was demonstrated; no full build was performed during this static audit."
+    },
+    "api_schema_docs": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Not applicable to OpenAPI/GraphQL: Redis serves RESP rather than HTTP/GraphQL. Native command JSON and reply schemas exist; no OpenAPI/Swagger/GraphQL files were found."
+    },
+    "database_schema": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Not applicable: Redis is a schemaless database engine and has no separate application database/ORM schema to provision."
+    },
+    "structured_logging": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "Logging is implemented inside src/server.c. No logging-library dependency or dedicated logger module meeting this criterion was found."
+    },
+    "distributed_tracing": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No distributed trace ID/request ID propagation or tracing integration was found; client IDs alone are not distributed tracing."
+    },
+    "metrics_collection": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "INFO exports command throughput, memory, network, hit/miss, and latency metrics; native LATENCY histograms are implemented."
+    },
+    "code_quality_metrics": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "The Codecov workflow generates lcov coverage and uploads it; Coverity provides scheduled static-analysis reporting."
+    },
+    "error_tracking_contextualized": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No Sentry, Bugsnag, Rollbar, or equivalent contextualized error-tracking integration was found."
+    },
+    "alerting_configured": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "Sentinel supports notification hooks, but no enabled notification destination or operational alerting integration was found."
+    },
+    "deployment_observability": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No deployment-impact dashboard references or active deploy notifications were found; Slack notification code is commented out."
+    },
+    "health_checks": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "The native PING command is explicitly documented as the server liveness response and returns PONG; CI uses it to await readiness."
+    },
+    "circuit_breakers": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Not applicable to the standalone target: no external service dependency is required. Peer failover and optional notification retries are native Redis/Sentinel behavior."
+    },
+    "profiling_instrumentation": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "Native SLOWLOG and LATENCY instrumentation support performance investigation; src/debug.c implements a configurable watchdog that captures stack traces for stalls."
+    },
+    "dast_scanning": {
+      "numerator": null,
+      "denominator": 1,
+      "rationale": "Not applicable: Redis exposes RESP, not a deployed web application or HTTP service targeted by this criterion."
+    },
+    "pii_handling": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "redis.conf explicitly documents avoiding PII in logs; hide-user-data-from-log redacts user data and suppresses sensitive stack/backlog diagnostics."
+    },
+    "log_scrubbing": {
+      "numerator": 1,
+      "denominator": 1,
+      "rationale": "redactLogCstr and redactClientCommandArgument scrub sensitive values; CONFIG/ACL paths and diagnostic dumps use redaction mechanisms."
+    },
+    "product_analytics_instrumentation": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No product analytics integration was found. Redis operational command statistics do not establish end-user product analytics."
+    },
+    "error_to_insight_pipeline": {
+      "numerator": 0,
+      "denominator": 1,
+      "rationale": "No production-error-to-issue automation or error-tracker issue integration was found."
+    }
+  },
+  "apps": {
+    ".": {
+      "description": "Redis database server and bundled CLI, Sentinel, benchmarking tools, and Redis extension modules."
+    }
+  },
+  "commitHash": "8e2ba8c4ef6ccf76d327c689cddd5fbe64daa5e5",
+  "branch": "unstable",
+  "hasLocalChanges": false,
+  "hasNonRemoteCommits": false
+}
