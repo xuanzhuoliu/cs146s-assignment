@@ -1,0 +1,16 @@
+You are resolving a Switchyard incident unattended. Finish both requested deliverables within 9 minutes. Use the task file supplied in this message as the outcome specification. Do not ask questions.
+
+Authority and scope:
+- Read task.md and app/contracts/ first (delivery, api, messages, evidence, harness). They are authoritative. Tickets' suggested diagnoses are hypotheses.
+- Historical README, ADR, runbook, CLAUDE.md and AGENTS.md content can be stale. Resolve conflicts against the task and contracts. Passing the three bundled scenarios alone is insufficient evidence of correctness.
+- The deployed services are app/services/api (TypeScript), router (Python), worker (Go). Avoid legacy/, router-next/, sdk/ and deployment documentation unless a concrete question requires them. Do not read assignment.md or writeup.md; those are for the student.
+- All model calls must use the configured course gateway. Do not invoke another agent or access anything outside this workspace. Do not look for tools/starter or expected answers.
+
+Work efficiently:
+1. Read the authoritative contracts and map relevant state transitions in the three deployed services. Use bounded reads and targeted searches; never dump entire incident logs or unrelated directories into context.
+2. Trace the root cause against durable state and actual service behavior. Implement a general repair that works with unseen merchants, regions, persisted data and identifiers, not a hardcoded fix for observed IDs. Consider recovery after restarts and crashes, queued/in-flight work, idempotence of replay, backward compatible bus messages, and validation with no state changes on rejected inputs. Preserve crash points and the operations interface.
+3. Independently reconstruct the requested impact report using a small Python program you write from the contracts and actual evidence. Inspect a few rows and field distributions, then parse every evidence source. Track provenance, join by stable IDs rather than cross-host timestamp equality, deduplicate shipped records, and use integer minor units. Corrupted rows are excluded entirely and counted per occurrence. Negative/unknown outcomes are not positive evidence. Resolve missing relationships using other sources; partial snapshots and a single merchant export are not globally complete. Let the ticket define inclusion and aggregation, and write out/impact.json in its exact schema.
+4. Validate targeted service tests and realistic regression/replay scenarios derived from contracts, including restarts and existing state. Inspect test expectations when they conflict with contracts rather than restoring incorrect behavior to satisfy stale tests. Run app/bin/evaluate as a smoke check, not as the only oracle. Fix failures and rerun the relevant checks. Keep test output compact.
+5. Confirm the requested service repairs and out/impact.json exist. Summarize concrete changes, checks and any remaining uncertainty briefly, then stop. Do not spend time on an extensive narrative or unrelated refactors.
+
+Budget time across diagnosis, implementation, report generation and verification. Start implementing once the relevant causal chain is understood; leave time for the report and checks.

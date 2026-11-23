@@ -1,0 +1,49 @@
+{
+  "passed": false,
+  "score": {
+    "categories": {
+      "incident": {
+        "passed": 9,
+        "total": 9,
+        "failed": []
+      },
+      "regressions": {
+        "passed": 10,
+        "total": 10,
+        "failed": []
+      },
+      "compat": {
+        "passed": 2,
+        "total": 2,
+        "failed": []
+      }
+    },
+    "repair": 1.0,
+    "impact": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "totals_right": 0,
+    "totals": 6,
+    "note": "impact report unreadable: FileNotFoundError",
+    "seconds": 3.5
+  },
+  "exit_code": -15,
+  "timed_out": true,
+  "seconds": 712.2,
+  "error": null,
+  "cost_usd": 0.24828975000000003,
+  "requests": 80,
+  "rejected": [],
+  "upstream_errors": 0,
+  "by_model": {
+    "claude-haiku-5-5": {
+      "requests": 80,
+      "cost_usd": 0.24828975000000003,
+      "input": 160,
+      "output": 127862,
+      "cache_read": 13387915,
+      "cache_write": 0,
+      "cache_write_1h": 252318
+    }
+  }
+}

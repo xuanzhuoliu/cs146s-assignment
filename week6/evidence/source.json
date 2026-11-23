@@ -1,0 +1,15 @@
+{
+  "upstream": "https://github.com/mihail911/modern-software-dev-assignments",
+  "commit": "6fa9ddab2bd1b60e6fc81f7485d8bb47eab666fa",
+  "runs": {
+    "baseline": "20261122-233159-1",
+    "model-only-haiku": "20261122-233907-1",
+    "contract-first-haiku": "20261122-234016-1",
+    "compact-sonnet-1": "20261122-234529-1",
+    "compact-sonnet-2": "20261122-235015-1",
+    "reviewed-sonnet-1": "20261122-235430-1",
+    "reviewed-sonnet-2": "20261122-235920-1"
+  },
+  "app_modified_in_submission": false,
+  "final_setup": "reviewed-sonnet"
+}
