@@ -75,6 +75,8 @@ Both runs used identical `run.sh` and `workflow.md`. They passed 2 of 2 full tri
 
 **No graded run has been created.** On November 23 both Assignment 6 entries became visible. Uploading the prepared 265-file archive to Assignment 6 (Autograder), assignment 9065912, was rejected with: “The outline for this assignment has not been set up yet. Notify your instructor to fix this problem.” The dashboard still shows No Submission; no submission ID or graded result was returned. Evidence is in `evidence/gradescope-upload-blocked-2026-11-23.json`. This configuration issue must be resolved by course staff before the held-out run can proceed.
 
+A fresh retry on November 23 at 8:47 PM Pacific uploaded the updated 266-file archive and received the same outline-configuration error. After reloading the course dashboard, Assignment 6 (Autograder) still showed **No Submission**. The retry therefore produced no held-out result to report. The timestamp, archive checksum, and response are recorded in `evidence/gradescope-upload-retry-2026-11-23.json`.
+
 | Submission | Repair | Impact | Passed? | Cost | Status |
 | --- | --- | --- | --- | --- | --- |
 | Upload attempt, no graded submission created | Not measured | Not measured | Not measured | Not measured | Rejected: assignment outline not configured |

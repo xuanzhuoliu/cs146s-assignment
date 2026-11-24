@@ -24,14 +24,14 @@ python3 tools/practice.py --keep
 
 ## Gradescope 当前状态与下一步
 
-Autograder 入口已恢复，但 11 月 23 日上传被拒绝，错误是 assignment outline 尚未配置。没有生成正式提交或评分。需等待课程端修复。
+Autograder 入口已恢复，但 11 月 23 日上传被拒绝；当晚 20:47（Pacific）重新上传 266 个文件仍得到相同错误：assignment outline 尚未配置。刷新后仍为 No Submission，没有生成正式提交或评分。需等待课程端修复。
 
 1. 课程端修复后，将 `CS146S-week6-submission.zip` 上传到 **Assignment 6 (Autograder)**。压缩包根目录直接包含 `run.sh`，不套一层 week6。
 2. 等待评分，保存实际修复分、影响报告分、成本和是否通过。总共最多三次正式提交；当前本次工作尚未使用任何一次。
 3. 将实际评分写入 `writeup.md` 的 Part III，更新 GitHub。
 4. 向 **Assignment 6 (Writeup)** 提交仓库链接：https://github.com/xuanzhuoliu/cs146s-assignment ，并填写实际用于评分的 commit hash。后续更新报告时必须同时更新此 hash。
 
-目前正式评分栏保留“Not measured”，不能用练习评分冒充。isaackann 和 vdaita 已是仓库 collaborator；mihail911 的邀请已存在，尚待接受。Writeup 表单还要求 patrickhua，目前尚未添加。
+目前正式评分栏保留“Not measured”，不能用练习评分冒充。isaackann 和 vdaita 已是仓库 collaborator；mihail911 的邀请已存在，尚待接受。patrickhua 的读写权限邀请也已发出，尚待接受。
 
 ## 你需要能解释的三个要点
 

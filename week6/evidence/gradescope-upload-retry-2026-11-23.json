@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-11-23T20:47:38.250404-08:00",
+  "assignment_id": 9065912,
+  "url": "https://www.gradescope.com/courses/1396510",
+  "errors": [
+    "The outline for this assignment has not been set up yet. Notify your instructor to fix this problem."
+  ],
+  "uploadRows": 266,
+  "archive": "CS146S-week6-submission.zip",
+  "archive_sha256": "dbe37a5bb54de192db15afe00dc121418f099b1477f2a17948055f496763c7bb",
+  "archive_size": 1611597,
+  "result": "Upload rejected; no submission ID or graded result returned."
+}
